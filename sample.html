@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Company Name</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Global Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            padding: 60px 0;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        
+        p {
+            margin-bottom: 20px;
+        }
+        
+        /* Navigation */
+        nav {
+            background-color: #fff;
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        nav a {
+            color: #333;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        nav a:hover {
+            color: #007BFF;
+        }
+        
+        /* Mission Section */
+        .mission-section {
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+        
+        /* Hero Image */
+        .hero-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* Timeline Section */
+        .timeline-section {
+            background-color: #fff;
+        }
+        
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 2px;
+            background-color: #ddd;
+            transform: translateX(-50%);
+        }
+        
+        .event {
+            padding: 20px;
+            margin: 20px 0;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: relative;
+            width: calc(50% - 40px);
+        }
+        
+        .event:nth-child(odd) {
+            margin-left: auto;
+        }
+        
+        .event::before {
+            content: '';
+            position: absolute;
+            top: 24px;
+            width: 20px;
+            height: 20px;
+            background-color: #fff;
+            border: 2px solid #ddd;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        .event:nth-child(odd)::before {
+            left: -10px;
+        }
+        
+        .event:nth-child(even)::before {
+            right: -10px;
+        }
+        
+        /* Values Section */
+        .values-section {
+            background-color: #f9f9f9;
+            text-align: left;
+        }
+        
+        .values-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .value-item {
+            flex: 1;
+            min-width: 300px;
+            max-width: 350px;
+            text-align: left;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        /* Team Section */
+        .team-section {
+            text-align: left;
+        }
+        
+        .team-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .team-member {
+            flex: 1;
+            min-width: 250px;
+            max-width: 300px;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .team-member h3 {
+            margin: 15px 0 5px;
+        }
+        
+        .team-member h4 {
+            color: #666;
+            font-weight: normal;
+            margin-bottom: 15px;
+        }
+        
+        .social-icons {
+            margin-top: 15px;
+        }
+        
+        .social-icons a {
+            color: #333;
+            margin: 0 10px;
+            font-size: 1.2rem;
+        }
+        
+        .social-icons a:hover {
+            color: #007BFF;
+        }
+        
+        /* Hiring Section */
+        .hiring-section {
+            text-align: left;
+            background-color: #f9f9f9;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #007BFF;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 500;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        
+        /* Gallery Section */
+        .gallery-section {
+            background-color: #fff;
+			text-align: center;
+        }
+        
+        .gallery-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            align-items: center;
+        }
+        
+        .gallery-main {
+            flex: 2;
+            min-width: 300px;
+        }
+        
+        .gallery-thumbs {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            min-width: 200px;
+        }
+        
+        .gallery-thumb {
+            width: 100%;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+        
+        .content-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .content-col {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        /* Contact Section */
+        .contact-section {
+            background-color: #f9f9f9;
+        }
+        
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+        
+        .contact-method {
+            flex: 1;
+            min-width: 300px;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .contact-icon {
+            font-size: 2.5rem;
+            color: #007BFF;
+            margin-bottom: 20px;
+        }
+        
+        .contact-detail {
+            display: inline-block;
+            margin-top: 15px;
+            color: #007BFF;
+            font-weight: 500;
+            text-decoration: none;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #f8f8f8;
+            padding: 30px 0;
+            text-align: center;
+        }
+        
+        .footer-social {
+            margin-bottom: 20px;
+        }
+        
+        .footer-social a {
+            color: #333;
+            margin: 0 10px;
+            font-size: 1.2rem;
+        }
+        
+        .footer-social a:hover {
+            color: #007BFF;
+        }
+        
+        .footer-links {
+            margin-bottom: 20px;
+        }
+        
+        .footer-links a {
+            color: #333;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+        .copyright {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 20px;
+            }
+            
+            .event {
+                width: 100%;
+                margin-left: 40px;
+            }
+            
+            .event::before {
+                left: -10px;
+            }
+            
+            .event:nth-child(even)::before {
+                left: -10px;
+                right: auto;
+            }
+            
+            nav .container {
+                flex-direction: column;
+            }
+            
+            .nav-links {
+                margin-top: 15px;
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav a {
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">
+                <h1>Company Name</h1>
+            </div>
+            <div class="nav-links">
+                <a href="#home">Home Services</a>
+                <a href="#about">About Us</a>
+                <a href="#contact">Contact Us</a>
+                <a href="#more">More Info</a>
+                <a href="#signup">Sign Up</a>
+                <a href="#faq">FAQ</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#blog">Blog Posts</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mission Section -->
+    <section class="mission-section">
+        <div class="container">
+            <h2>Describe why your company exists [mission statement]</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+            </p>
+        </div>
+    </section>
+
+    <!-- Hero Image -->
+    <img src="download(2).jpg" alt="Company Hero Image" class="hero-image">
+
+    <!-- Story Section -->
+    <section class="timeline-section">
+        <div class="container">
+            <h2>Our Story</h2>
+            <p>Share your journey from the beginning to now</p>
+            
+            <div class="timeline">
+                <!-- Event 1 -->
+                <div class="event">
+                    <h3>Year • Month</h3>
+                    <p>Summary of event. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                </div>
+                <!-- Event 2 -->
+                <div class="event">
+                    <h3>Year • Month</h3>
+                    <p>Summary of event. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                </div>
+                <!-- Event 3 -->
+                <div class="event">
+                    <h3>Year • Month</h3>
+                    <p>Summary of event. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                </div>
+                <!-- Event 4 -->
+                <div class="event">
+                    <h3>Year • Month</h3>
+                    <p>Summary of event. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                </div>
+                <!-- Event 5 -->
+                <div class="event">
+                    <h3>Year • Month</h3>
+                    <p>Summary of event. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section class="mission-section">
+        <div class="container">
+            <h2>Tagline</h2>
+            <p>
+                Describe what your company is building towards in the future. This vision statement should serve the purpose of selling the dream of the company to hiring talent, investors and partners.
+            </p>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values-section">
+        <div class="container">
+            <h4>Tagline</h4>
+            <h2>Emphasize what's important to your company</h2>
+            <p class="tagline-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.
+            </p>
+            
+            <div class="values-container">
+                <!-- Value 1 -->
+                <div class="value-item">
+                    <img src="image1.jpg" alt="Value 1">
+                    <h3>Highlight value one</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.</p>
+                </div>
+                
+                <!-- Value 2 -->
+                <div class="value-item">
+                    <img src="image2.jpg" alt="Value 2">
+                    <h3>Highlight value two</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.</p>
+                </div>
+                
+                <!-- Value 3 -->
+                <div class="value-item">
+                    <img src="image3.jpg" alt="Value 3">
+                    <h3>Highlight value three</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="container">
+            <h4>Tagline</h4>
+            <h2>Introduce the team</h2>
+            <p class="tagline-description">
+                A common concern a visitor experiences is how well will the product or service be supported. Introducing the team eases fears while showing confidence.
+            </p>
+            
+            <div class="team-container">
+                <!-- Team Member 1 -->
+                <div class="team-member">
+                    <img src="image1.jpg" alt="Team Member">
+                    <h3>Full Name</h3>
+                    <h4>Job Title</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Team Member 2 -->
+                <div class="team-member">
+                    <img src="image2.jpg" alt="Team Member">
+                    <h3>Full Name</h3>
+                    <h4>Job Title</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Team Member 3 -->
+                <div class="team-member">
+                    <img src="image3.jpg" alt="Team Member">
+                    <h3>Full Name</h3>
+                    <h4>Job Title</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Second Row of Team Members -->
+            <div class="team-container">
+                <!-- Team Member 4 -->
+                <div class="team-member">
+                    <img src="image1.jpg" alt="Team Member">
+                    <h3>Full Name</h3>
+                    <h4>Job Title</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Team Member 5 -->
+                <div class="team-member">
+                    <img src="image2.jpg" alt="Team Member">
+                    <h3>Full Name</h3>
+                    <h4>Job Title</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Team Member 6 -->
+                <div class="team-member">
+                    <img src="image3.jpg" alt="Team Member">
+                    <h3>Full Name</h3>
+                    <h4>Job Title</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hiring Section -->
+    <section class="hiring-section">
+        <div class="container">
+            <h2>We are Hiring!</h2>
+            <p class="tagline-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            </p>
+            <button class="btn">Open Positions</button>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <div class="container">
+            <h1>Image Gallery</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula.</p>
+            
+            <div class="gallery-container">
+                <div class="gallery-main">
+                    <img src="download(2).jpg" alt="Main Gallery Image">
+                </div>
+                <div class="gallery-thumbs">
+                    <img src="download(2).jpg" alt="Thumbnail 1" class="gallery-thumb">
+                    <img src="download(2).jpg" alt="Thumbnail 2" class="gallery-thumb">
+                    <img src="download(2).jpg" alt="Thumbnail 3" class="gallery-thumb">
+                    <img src="download(2).jpg" alt="Thumbnail 4" class="gallery-thumb">
+                </div>
+            </div>
+            
+            <div class="content-row">
+                <div class="content-col">
+                    <h3>Medium length heading goes here.</h3>
+                </div>
+                <div class="content-col">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
+                    <button class="btn">Button</button>
+                    <button class="btn">Button</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-container">
+                <!-- Email -->
+                <div class="contact-method">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in ero.</p>
+                    <a href="mailto:hello@company.com" class="contact-detail">hello@company.com</a>
+                </div>
+                
+                <!-- Live Chat -->
+                <div class="contact-method">
+                    <div class="contact-icon">
+                        <i class="fas fa-comment-dots"></i>
+                    </div>
+                    <h3>Live Chat</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in ero.</p>
+                </div>
+                
+                <!-- Phone -->
+                <div class="contact-method">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3>Phone</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in ero.</p>
+                    <a href="tel:+15550000000" class="contact-detail">+1 (555) 000-0000</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            
+            <div class="footer-links">
+                <a href="/privacy-policy">Privacy Policy</a>
+                <a href="/terms-of-service">Terms of Service</a>
+                <a href="/cookies-settings">Cookies Settings</a>
+            </div>
+            
+            <p class="copyright">&copy; 2024 Your Company Name. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

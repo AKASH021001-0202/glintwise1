@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car & Bike Wash Chatbot</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #e3f2fd;
+            margin: 0;
+        }
+        .chat-container {
+            width: 380px;
+            height: 500px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        .chat-header {
+            background: #007bff;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .chat-box {
+            flex: 1;
+            padding: 15px;
+            overflow-y: auto;
+            background: #f9f9f9;
+        }
+        .message {
+            margin-bottom: 12px;
+            max-width: 80%;
+            padding: 10px 15px;
+            border-radius: 18px;
+            line-height: 1.4;
+            position: relative;
+            animation: fadeIn 0.3s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .bot-message {
+            background: white;
+            color: #333;
+            border-bottom-left-radius: 5px;
+            align-self: flex-start;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        }
+        .user-message {
+            background: #007bff;
+            color: white;
+            border-bottom-right-radius: 5px;
+            margin-left: auto;
+        }
+        .options-container {
+            padding: 10px;
+            background: white;
+            border-top: 1px solid #eee;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .option-btn {
+            background: #e3f2fd;
+            color: #007bff;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+        .option-btn:hover {
+            background: #007bff;
+            color: white;
+        }
+        .typing-indicator {
+            display: flex;
+            padding: 10px 15px;
+        }
+        .typing-dot {
+            width: 8px;
+            height: 8px;
+            background: #ccc;
+            border-radius: 50%;
+            margin: 0 2px;
+            animation: typingAnimation 1.4s infinite ease-in-out;
+        }
+        .typing-dot:nth-child(1) { animation-delay: 0s; }
+        .typing-dot:nth-child(2) { animation-delay: 0.2s; }
+        .typing-dot:nth-child(3) { animation-delay: 0.4s; }
+        @keyframes typingAnimation {
+            0%, 60%, 100% { transform: translateY(0); }
+            30% { transform: translateY(-5px); }
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">Car & Bike Wash Assistant</div>
+        <div class="chat-box" id="chatBox"></div>
+        <div class="options-container" id="options"></div>
+    </div>
+
+    <script>
+        const chatBox = document.getElementById("chatBox");
+        const options = document.getElementById("options");
+        let conversationState = "start";
+
+        function showTypingIndicator() {
+            const typing = document.createElement("div");
+            typing.className = "typing-indicator";
+            typing.innerHTML = `
+                <div class="typing-dot"></div>
+                <div class="typing-dot"></div>
+                <div class="typing-dot"></div>
+            `;
+            chatBox.appendChild(typing);
+            chatBox.scrollTop = chatBox.scrollHeight;
+            return typing;
+        }
+
+        function removeTypingIndicator(typingElement) {
+            if (typingElement && typingElement.parentNode) {
+                typingElement.parentNode.removeChild(typingElement);
+            }
+        }
+
+        function addMessage(text, sender) {
+            const msg = document.createElement("div");
+            msg.classList.add("message", `${sender}-message`);
+            msg.innerText = text;
+            chatBox.appendChild(msg);
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+
+        function showOptions(optionsArray) {
+            options.innerHTML = "";
+            optionsArray.forEach(option => {
+                const btn = document.createElement("button");
+                btn.className = "option-btn";
+                btn.innerText = option.text;
+                btn.onclick = () => {
+                    addMessage(option.text, "user");
+                    const typing = showTypingIndicator();
+                    // Simulate bot thinking time
+                    setTimeout(() => {
+                        removeTypingIndicator(typing);
+                        option.action();
+                    }, 800);
+                };
+                options.appendChild(btn);
+            });
+        }
+
+        function startConversation() {
+            conversationState = "start";
+            addMessage("Hello! I'm your car and bike wash assistant. How can I help you today?", "bot");
+            showOptions([
+                { text: "Book a car wash", action: carWashOptions },
+                { text: "Book a bike wash", action: bikeWashOptions },
+                { text: "website", action: showPricing }
+            ]);
+        }
+
+        function carWashOptions() {
+            conversationState = "car_wash";
+            addMessage("Great! We offer these car wash services:", "bot");
+            showOptions([
+                { text: "Basic Wash (₹699)", action: () => confirmBooking("Basic Car Wash", 699) },
+                
+                { text: "Back", action: startConversation }
+            ]);
+        }
+
+        function bikeWashOptions() {
+            conversationState = "bike_wash";
+            addMessage("Awesome! We have these bike wash services:", "bot");
+            showOptions([
+                { text: "Basic Wash (₹199)", action: () => confirmBooking("Basic Bike Wash", 199) },
+                
+                { text: "Back", action: startConversation }
+            ]);
+        }
+
+        function showPricing() {
+            
+            showOptions([
+                { text: "Book a service now", action: startConversation },
+                { text: "Visit our website", action: () => {
+                    addMessage("You can visit our website at www.glintwiseindia.com", "bot");
+                    startConversation();
+                }}
+            ]);
+        }
+
+        function confirmBooking(service, price) {
+            addMessage(`You've selected: ${service} for ₹${price}. Should I book this for you?`, "bot");
+            showOptions([
+                { text: "Yes, please book it", action: () => completeBooking(service, price) },
+                { text: "No, show other options", action: () => {
+                    if (conversationState === "car_wash") carWashOptions();
+                    else if (conversationState === "bike_wash") bikeWashOptions();
+                    else startConversation();
+                }}
+            ]);
+        }
+
+        function completeBooking(service, price) {
+            addMessage(`✅ Your ${service} for ₹${price} has been booked!`, "bot");
+            addMessage("Would you like to book another service?", "bot");
+            showOptions([
+                { text: "Yes, book another", action: startConversation },
+                { text: "No, I'm done", action: () => {
+                    addMessage("Thank you for using our service! Have a great day! 🚗💨", "bot");
+                    options.innerHTML = "";
+                }}
+            ]);
+        }
+
+        // Start the conversation after a brief delay
+        setTimeout(() => {
+            const typing = showTypingIndicator();
+            setTimeout(() => {
+                removeTypingIndicator(typing);
+                startConversation();
+            }, 1500);
+        }, 500);
+    </script>
+</body>
+</html>
