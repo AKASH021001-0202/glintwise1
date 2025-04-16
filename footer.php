@@ -96,13 +96,10 @@
 <script src="assets/js/chatbot.js"></script>
 <script src="assets/js/script.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-
-
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 <script>
   function startRazorpayPayment() {
@@ -112,7 +109,7 @@
       currency: "INR",
       name: "Test Company",
       description: "Test Transaction",
-      handler: function (response) {
+      handler: function(response) {
         alert("Payment successful! ID: " + response.razorpay_payment_id);
         // ✅ Optional: Redirect or show confirmation page
         // window.location.href = "thankyou.html";
@@ -143,35 +140,34 @@
   });
 </script>
 <script>
-new Swiper(".mySwiper11", {
-  direction: "vertical",
-  spaceBetween: 10,
-  effect: "creative",
-  creativeEffect: {
-    prev: {
-      shadow: true,
-      translate: [0, "-10%", -100],
+  new Swiper(".mySwiper11", {
+    direction: "vertical",
+    spaceBetween: 10,
+    effect: "creative",
+    creativeEffect: {
+      prev: {
+        shadow: true,
+        translate: [0, "-10%", -100],
+      },
+      next: {
+        translate: [0, "100%", 0],
+      },
     },
-    next: {
-      translate: [0, "100%", 0],
+    mousewheel: {
+      releaseOnEdges: true,
+      sensitivity: 1,
     },
-  },
-  mousewheel: {
-    releaseOnEdges: true,
-    sensitivity: 1,
-  },
-  loop: false,
-  slidesPerView: 1,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  speed: 1000,
-  grabCursor: true,
-  touchRatio: 1.5,
-  touchEventsTarget: "container",
-});
-
+    loop: false,
+    slidesPerView: 1,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    speed: 1000,
+    grabCursor: true,
+    touchRatio: 1.5,
+    touchEventsTarget: "container",
+  });
 </script>
 
 
@@ -193,7 +189,7 @@ new Swiper(".mySwiper11", {
 
   const handleFormSubmit = (formId) => {
     const form = document.getElementById(formId);
-    console.log(form);
+
 
     if (!form) return;
 
@@ -201,6 +197,7 @@ new Swiper(".mySwiper11", {
       e.preventDefault();
 
       const formData = new FormData(form);
+      console.log(formData);
       const submitBtn = form.querySelector("button[type='submit']");
 
       submitBtn.disabled = true;
@@ -229,6 +226,7 @@ new Swiper(".mySwiper11", {
 
   handleFormSubmit("myForm1");
   handleFormSubmit("myForm");
+  handleFormSubmit("bothModalForm");
 </script>
 
 
@@ -277,7 +275,7 @@ new Swiper(".mySwiper11", {
     }
   });
 </script>
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
 
 <script>
   function refreshCaptcha() {
@@ -406,17 +404,15 @@ new Swiper(".mySwiper11", {
   });
 </script>
 
-<script>
-</script>
 
 <script>
   let vid = document.getElementById("howItWorksVideo");
 
-function playVid() {
+  function playVid() {
     vid.play();
-}
-
+  }
 </script>
+
 
 
 </body>

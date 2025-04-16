@@ -2218,6 +2218,13 @@ p.form_subtitle {
   background-position: center;
   min-height: 880px !important;
 }
+.bg_popup2 {
+  background: url("../images/carbike.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 880px !important;
+}
 /* chat bot */
 /* Add these new styles */
 .chat-icon {
@@ -3055,4 +3062,28 @@ r input:focus  {
   color: black;
   top: 4px;
   font-size: 12px;
+}
+
+.number-control {
+  display: flex;
+  align-items: center;
+}
+
+
+
+
+
+.bike-number-right,.car-number-left,.bike-number-left, .car-number-right {
+  margin: 0px;
+}
+
+.number-quantity {
+  padding: 0.25rem;
+  width: 50px;
+  height: 38px;
+}
+
+#bothModal .custom-modal {
+  max-width: 90vw;
+  width: 76vw;
 }

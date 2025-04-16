@@ -1,7 +1,7 @@
 <?php include('header.php'); ?>
 
 <!-- Tagline Section -->
-<section class="py-5 text-center banner text-white">
+<section class=" text-center banner text-white">
     <div class="container">
         <div class="banner-content">
 

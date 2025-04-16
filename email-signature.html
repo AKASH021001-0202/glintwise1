@@ -54,103 +54,102 @@
         list-style: none;
       }
       .example-2 {
-    padding: 0 10px;
-    margin: 0;
-    border-left: 1px solid #0000003b;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: baseline;
-    height: 100%;
-}
+        padding: 0 10px;
+        margin: 0;
+        border-left: 1px solid #0000003b;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: baseline;
+        height: 100%;
+      }
       .card1 {
-  width: fit-content;
-  height: fit-content;
-  background-color: transparent;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  
-  gap: 5px;
-}
+        width: fit-content;
+        height: fit-content;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
 
+        gap: 5px;
+      }
 
-.socialContainer {
-  width: 25px;
-  height: 25px;
-  background-color: rgb(103, 95, 117);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  transition-duration: 0.3s;
-  border-radius: 30px;
-}
-/* instagram*/
-.containerOne:hover {
-  background-color: #d62976;
-  transition-duration: 0.3s;
-  transform: scale(1.1);
-}
-/* twitter*/
-.containerTwo:hover {
-  background-color: #000000;
-  transition-duration: 0.3s;
-  transform: scale(1.1);
-}
-/* linkdin*/
-.containerThree:hover {
-  background-color: #0072b1;
-  transition-duration: 0.3s;
-  transform: scale(1.1);
-}
-/* Whatsapp*/
-.containerFour:hover {
-  background-color: #41C352;
-  transition-duration: 0.3s;
-  transform: scale(1.1);
-}
+      .socialContainer {
+        width: 25px;
+        height: 25px;
+        background-color: rgb(103, 95, 117);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        transition-duration: 0.3s;
+        border-radius: 30px;
+      }
+      /* instagram*/
+      .containerOne:hover {
+        background-color: #d62976;
+        transition-duration: 0.3s;
+        transform: scale(1.1);
+      }
+      /* twitter*/
+      .containerTwo:hover {
+        background-color: #000000;
+        transition-duration: 0.3s;
+        transform: scale(1.1);
+      }
+      /* linkdin*/
+      .containerThree:hover {
+        background-color: #0072b1;
+        transition-duration: 0.3s;
+        transform: scale(1.1);
+      }
+      /* Whatsapp*/
+      .containerFour:hover {
+        background-color: #41c352;
+        transition-duration: 0.3s;
+        transform: scale(1.1);
+      }
 
-.socialContainer:active {
-  transform: scale(0.9);
-  transition-duration: 0.3s;
-}
+      .socialContainer:active {
+        transform: scale(0.9);
+        transition-duration: 0.3s;
+      }
 
-.socialSvg {
-  width: 12px;
-}
+      .socialSvg {
+        width: 12px;
+      }
 
-.socialSvg path {
-  fill: rgb(255, 255, 255);
-}
+      .socialSvg path {
+        fill: rgb(255, 255, 255);
+      }
 
-.socialContainer:hover .socialSvg {
-  animation: slide-in-top 0.3s both;
-}
+      .socialContainer:hover .socialSvg {
+        animation: slide-in-top 0.3s both;
+      }
 
-@keyframes slide-in-top {
-  0% {
-    transform: translateY(-50px);
-    opacity: 0;
-  }
+      @keyframes slide-in-top {
+        0% {
+          transform: translateY(-50px);
+          opacity: 0;
+        }
 
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
 
-.email_content {
-    color: #000;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    align-items: baseline;
-    justify-content: center;
-    height: 100%;
-    padding-left: 20px;
-}
+      .email_content {
+        color: #000;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        justify-content: center;
+        height: 100%;
+        padding-left: 20px;
+      }
       .price-box {
         background-color: #e0f7fa;
         border-left: 6px solid #00bcd4;
@@ -175,28 +174,29 @@
         color: #999999;
         padding: 20px;
       }
-      .email_content p, .icon_con p {
-    font-size: 12px;
-    width: 70%;
-    padding: 5px 0 0;
-    font-weight: 300;
-    margin: 0;
-}
+      .email_content p,
+      .icon_con p {
+        font-size: 12px;
+        width: 70%;
+        padding: 5px 0 0;
+        font-weight: 300;
+        margin: 0;
+      }
       .bottomheader {
         background: #071dea;
         margin-top: 30px;
         color: #fff;
       }
       .icon_con {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100%;
-    justify-content: center;
-    padding: 10px;
-    text-align: center;
-}
-      .bl-1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        justify-content: center;
+        padding: 10px;
+        text-align: center;
+      }
+      .bl-1 {
         border-right: 1px solid #ffffff3b;
       }
     </style>
@@ -224,22 +224,22 @@
                       ></path>
                     </svg>
                   </a>
-                
+
                   <a class="socialContainer containerTwo" href="#">
                     <svg
-                    viewBox="0 0 16 16"
-                    fill="currentColor"
-                    height="16"
-                    width="16"
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="socialSvg twitterSvg"
-                  >
-                    <path
-                      d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"
-                    ></path>
-                  </svg>
+                      viewBox="0 0 16 16"
+                      fill="currentColor"
+                      height="16"
+                      width="16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="socialSvg twitterSvg"
+                    >
+                      <path
+                        d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"
+                      ></path>
+                    </svg>
                   </a>
-                
+
                   <a class="socialContainer containerThree" href="#">
                     <svg viewBox="0 0 448 512" class="socialSvg linkdinSvg">
                       <path
@@ -247,7 +247,7 @@
                       ></path>
                     </svg>
                   </a>
-                
+
                   <a class="socialContainer containerFour" href="#">
                     <svg viewBox="0 0 16 16" class="socialSvg whatsappSvg">
                       <path
@@ -256,15 +256,14 @@
                     </svg>
                   </a>
                 </div>
-                
               </div>
             </div>
             <div class="col-lg-7">
               <div class="email_content">
                 <h1>GlintWise India</h1>
                 <p>
-                  No:10,11,1st Floor, Dr.Radhakrishnan Nagar, P.H Road , Arumbakkam,
-                  Chennai, Tamil Nadu 600106.
+                  No:10,11,1st Floor, Dr.Radhakrishnan Nagar, P.H Road ,
+                  Arumbakkam, Chennai, Tamil Nadu 600106.
                 </p>
               </div>
             </div>
@@ -286,7 +285,7 @@
                 <p>info@glintwise.com</p>
               </div>
             </div>
-            <div class="col-lg-4 ">
+            <div class="col-lg-4">
               <div class="icon_con">
                 <i class="fa fa-globe"></i>
                 <p>www.glintwise.com</p>
@@ -298,5 +297,7 @@
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    
   </body>
 </html>

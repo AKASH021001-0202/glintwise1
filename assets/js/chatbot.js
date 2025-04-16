@@ -262,6 +262,25 @@ document.addEventListener("DOMContentLoaded", function () {
             else resetToMainMenu();
           },
         },
+        {
+          text: "Booking Both Two Services",
+          action: () => {
+            addCustomHTMLMessage(
+              `
+                  <div class="message-bubble">
+                    Thank you for using our service! Have a great day! 🚗💨
+                  </div>
+                `,
+              "bot"
+            );
+            setTimeout(() => {
+              const bothModalForm = new bootstrap.Modal(document.getElementById("bothModal"));
+              bothModalForm.show();
+              resetToMainMenu();
+            }, 1000);
+           
+          },
+        },
       ]);
     }
 
@@ -284,15 +303,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
       showOptions([
         { text: "Yes, book another", action: resetToMainMenu },
+
         {
           text: "No, I'm done",
           action: () => {
             addCustomHTMLMessage(
-              `
-                  <div class="message-bubble">
-                    Thank you for using our service! Have a great day! 🚗💨
-                  </div>
-                `,
+              `<div class="message-bubble"> Thank you for using our service! Have a great day! 🚗💨 </div>`,
               "bot"
             );
             setTimeout(() => {
@@ -310,7 +326,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 );
                 bikeModal.show();
               }
-              resetToMainMenu()
+              resetToMainMenu();
             }, 1500);
           },
         },
