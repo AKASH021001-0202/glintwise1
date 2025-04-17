@@ -103,7 +103,7 @@
         <div class="row">
             <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
                 <div class="mission_content">
-                    <img src="assets/images/shape.png" alt="">
+                    <img src="assets/images/shape.png" class="v_shape" alt="">
                     <div class="mis_icon">
                         <img src="assets/images/vission.png" alt="">
                     </div>
@@ -115,7 +115,7 @@
             </div>
             <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
                 <div class="mission_content">
-                    <img src="assets/images/shape.png" alt="">
+                    <img src="assets/images/shape.png" class="v_shape" alt="">
                     <div class="mis_icon">
                         <img src="assets/images/mission.png" alt="">
                     </div>
@@ -127,7 +127,7 @@
             </div>
             <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
                 <div class="mission_content">
-                    <img src="assets/images/shape.png" alt="">
+                    <img src="assets/images/shape.png" class="v_shape" alt="">
                     <div class="mis_icon">
                         <img src="assets/images/value.png" alt="">
                     </div>
