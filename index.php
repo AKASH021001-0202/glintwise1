@@ -84,7 +84,7 @@
 
 
 <!-- Hero Image Slider -->
-<section class="hero" data-aos="zoom-in" data-aos-duration="1000" data-aos-easing="ease-in-out">
+<section class="hero" data-aos="fade-in" data-aos-duration="1000" data-aos-easing="ease-in-out">
   <div class="container">
     <div class="row">
       <div class="col-lg-12 hero-slide">
@@ -95,13 +95,13 @@
           <div class="counter_section">
             <div class="row">
               <div class="col-lg-12">
-                <div class="" data-aos="zoom-in" data-aos-duration="1000" data-aos-easing="ease-in-out">
+                <div class="" data-aos="fade-in" data-aos-duration="1000" data-aos-easing="ease-in-out">
                   <div class="counter-box-content">
                     <div class="container">
                       <div class="row">
                         <div class="col-lg-12">
                           <div class="container">
-                            <div class="row counter-box-item" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
+                            <div class="row counter-box-item" data-aos="fade-in" data-aos-duration="1000" data-aos-easing="ease-in-out">
                               <div class="col-lg-6 ">
                                 <div class="counter-box-icon">
                                   <img src="assets/images/satification_clirnt.png" alt="">
@@ -109,8 +109,8 @@
                               </div>
                               <div class="col-lg-6">
                                 <div class="counter-box-text suport">
-                                  <h2 data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease-in-out" id="satisfiedClientsCounter" data-success-count="0">0+</h2>
-                                  <p data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease-in-out">Satisfied Clients</p>
+                                  <h2 data-aos="fade-in" data-aos-duration="1500" data-aos-easing="ease-in-out" id="satisfiedClientsCounter" data-success-count="0">0+</h2>
+                                  <p data-aos="fade-in" data-aos-duration="1500" data-aos-easing="ease-in-out">Satisfied Clients</p>
                                 </div>
                               </div>
                             </div>
@@ -124,7 +124,7 @@
                         <div class="col-lg-6 ">
 
                           <div class="container">
-                            <div class="row counter-box-item" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
+                            <div class="row counter-box-item" data-aos="fade-in" data-aos-duration="1000" data-aos-easing="ease-in-out">
                               <div class="col-lg-6">
                                 <div class="counter-box-icon img2">
                                   <img src="assets/images/proffectionals.png" alt="">
@@ -132,13 +132,13 @@
                               </div>
                               <div class="col-lg-6">
                                 <div class="counter-box-text">
-                                  <h2 data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease-in-out">3000+</h2>
+                                <h2 data-aos="fade-in" data-aos-duration="1500" data-aos-easing="ease-in-out" id="professionalsCounter">3000+</h2>
 
                                 </div>
 
                               </div>
                               <div class="col-lg-12">
-                                <p data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease-in-out">Dedicated Professionals</p>
+                                <p data-aos="fade-in" data-aos-duration="1500" data-aos-easing="ease-in-out">Dedicated Professionals</p>
                               </div>
                             </div>
                           </div>
@@ -146,21 +146,19 @@
                         </div>
                         <div class="col-lg-6">
                           <div class="container">
-                            <div class="row counter-box-item" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
+                            <div class="row counter-box-item" data-aos="fade-in" data-aos-duration="1000" data-aos-easing="ease-in-out">
                               <div class="col-lg-6">
                                 <div class="counter-box-icon img2">
                                   <img src="assets/images/car.png" alt="">
                                 </div>
                               </div>
                               <div class="col-lg-6">
-                                <div class="counter-box-text">
-                                  <h2 data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease-in-out">5000+</h2>
-
+                                <div class="counter-box-text">   <h2 data-aos="fade-in" data-aos-duration="1500" data-aos-easing="ease-in-out" id="servicesCounter">5000+</h2>
                                 </div>
                               </div>
                               <div class="col-lg-12">
                                 <div class="content">
-                                <p data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease-in-out" class="aos-init aos-animate" style="margin-right: 40px;">Car and Bike Services</p>
+                                <p data-aos="fade-in" data-aos-duration="1500" data-aos-easing="ease-in-out" class="aos-init aos-animate" style="margin-right: 40px;">Car and Bike Services</p>
                                 </div>
                               </div>
                             </div>
@@ -427,7 +425,7 @@
               </div>
               <i class="faq-icon fas fa-plus"></i>
             </div>
-            <p class="faq-answer">Yes! You can book a single wash or choose a monthly plan for regular cleaning.</p>
+            <p class="faq-answer">No, we currently only offer monthly plans for regular cleaning. This ensures consistent quality and better service for your vehicle.</p>
           </div>
 
           <div class="faq-item" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">

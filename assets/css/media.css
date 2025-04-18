@@ -69,7 +69,6 @@
 
 /* Mobile devices (max-width: 767px) */
 @media (max-width: 767px) {
-  
   section.hero-slide {
     height: 400px;
     overflow: hidden;
@@ -453,42 +452,44 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
-}
-.navbar {
-  background: #ffffff8c;
-  border-radius: 10px;
-  padding: 10px;
-}
-.about-us-page-header {
-  background-image: url("../images/slider-1.jpg");
-  min-height: 140px;
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 100%;
-  margin: auto;
-}.heading_slider {
-  display: flex;
-  align-items: end;
-  justify-content: end;
-  height: 100%;
-}
+  }
+  .navbar {
+    background: #ffffff8c;
+    border-radius: 10px;
+    padding: 10px;
+  }
+  .about-us-page-header {
+    background-image: url("../images/slider-1.jpg");
+    min-height: 140px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100%;
+    margin: auto;
+  }
+  .heading_slider {
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    height: 100%;
+  }
 
-.banner {
-  background: url("../images/slide4.jpg") no-repeat center center;
-  height: 300px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.iconcontent {
-  background: #f6f8fc;
-  padding: 10px;
-  box-shadow: 0px 1px 4px #00000015;
-  border-radius: 10px;
-  margin: 10px;
-}
-
-
+  .banner {
+    background: url("../images/slide4.jpg") no-repeat center center;
+    height: 300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .iconcontent {
+    background: #f6f8fc;
+    padding: 10px;
+    box-shadow: 0px 1px 4px #00000015;
+    border-radius: 10px;
+    margin: 10px;
+  }
+  .footer-widgets h4 {
+    width: 100%;
+  }
 }
 @media (min-width: 425px) and (max-width: 769px) {
   .about-us-page-header {
@@ -499,16 +500,15 @@
     height: 100%;
     margin: auto;
   }
-  .heading_slider{
+  .heading_slider {
     height: 100%;
   }
   header {
     top: 0;
-}
+  }
 }
 @media (min-width: 375px) and (max-width: 425px) {
- 
   header {
     top: 30px;
-}
+  }
 }

@@ -80,7 +80,7 @@
                             <li>
                                 <div class="icon_con">
                                     <i class="fa fa-check"></i>
-                                    <h5>4 Premium Interior Foam Wash & Vacuum Cleaning</h5>
+                                    <h5>Vacuum Cleaning</h5>
                                 </div>
                             </li>
                             <li>
@@ -89,12 +89,7 @@
                                     <h5>Bi-weekly Air Pressure Check</h5>
                                 </div>
                             </li>
-                            <li>
-                                <div class="icon_con">
-                                    <i class="fa fa-check"></i>
-                                    <h5>Monthly Once Under-Chassis Wash</h5>
-                                </div>
-                            </li>
+
                         </ul>
                     </div>
                     <div class="price-btn">
@@ -128,7 +123,8 @@
                             <li>
                                 <div class="icon_con">
                                     <i class="fa fa-check"></i>
-                                    <h5>Yearly Once Oil Change</h5>
+                                    <h5>
+                                        Bi-weekly Air Pressure Check</h5>
                                 </div>
                             </li>
                         </ul>
@@ -171,7 +167,7 @@
                             </div>
                             <i class="faq-icon fas fa-plus"></i>
                         </div>
-                        <p class="faq-answer">Yes! You can book a single wash or choose a monthly plan for regular cleaning.</p>
+                        <p class="faq-answer">No, we currently only offer monthly plans for regular cleaning. This ensures consistent quality and better service for your vehicle.</p>
                     </div>
 
                     <!-- FAQ Item 3 -->

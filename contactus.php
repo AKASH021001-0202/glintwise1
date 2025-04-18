@@ -16,8 +16,7 @@
                 <div class="col-lg-7">
                     <div class="getintouch_content" data-aos="fade-right" data-aos-duration="600" data-aos-delay="100">
                         <h1>We are <span class="color-hover"> always ready </span> to
-                            help you and answer
-                            <span class="color-hover">your questions</span>
+                            help you and answer <span class="color-hover">your questions</span>
                         </h1>
                         <p data-aos="fade-right" data-aos-duration="600" data-aos-delay="150">We're always here to assist you with any questions or concerns. Our team is dedicated to providing prompt and reliable support. Feel free to reach out—we're happy to help!</p>
                     </div>
@@ -26,7 +25,7 @@
                             <div class="touch_content">
                                 <h5>Phone</h5>
                                 <div class="divider"></div>
-                                <p>+91 81100 50600 / +91 81100 51600</p>
+                                <p>+91 81100 61300 </p>
                             </div>
                         </div>
                         <div class="col-lg-6" data-aos="fade-up" data-aos-duration="600" data-aos-delay="250">

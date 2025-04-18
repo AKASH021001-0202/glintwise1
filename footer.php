@@ -7,7 +7,7 @@
           <div class="footer-widgets">
 
             <img src="assets/images/logo.svg" alt="">
-            <h2>Lorem ipsum dolor sit amet, consectetur</h2>
+            <h4>"Keep your car spotless with our hassle-free service for a gleaming ride every day."</h4>
           </div>
         </div>
         <div class="col-md-3 ">
@@ -20,7 +20,6 @@
               <li><a href="#" class="text-dark">About Us</a></li>
               <li><a href="#" class="text-dark">Services</a></li>
               <li><a href="#" class="text-dark">Contact Us</a></li>
-
             </ul>
           </div>
 
@@ -97,7 +96,7 @@
 <script src="assets/js/script.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="assets/js/swiper-bundle.min.js"></script>
 <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
@@ -140,33 +139,13 @@
   });
 </script>
 <script>
-  new Swiper(".mySwiper11", {
-    direction: "vertical",
-    spaceBetween: 10,
-    effect: "creative",
-    creativeEffect: {
-      prev: {
-        shadow: true,
-        translate: [0, "-10%", -100],
-      },
-      next: {
-        translate: [0, "100%", 0],
-      },
-    },
-    mousewheel: {
-      releaseOnEdges: true,
-      sensitivity: 1,
-    },
-    loop: false,
-    slidesPerView: 1,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    speed: 1000,
-    grabCursor: true,
-    touchRatio: 1.5,
-    touchEventsTarget: "container",
+  
+</script>
+<script>
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 10);
   });
 </script>
 

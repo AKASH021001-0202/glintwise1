@@ -185,6 +185,7 @@
         </div>
     </div>
 </section>
+
 <style>
     .gallery_btn .box {
         top: 0;
@@ -204,4 +205,5 @@
         margin-top: 20px;
     }
 </style>
+
 <?php include('footer.php'); ?>

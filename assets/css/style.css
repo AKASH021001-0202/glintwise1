@@ -3087,3 +3087,6 @@ r input:focus  {
   max-width: 90vw;
   width: 76vw;
 }
+.footer-widgets h4 {
+  width: 66%;
+}
