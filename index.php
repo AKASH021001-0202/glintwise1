@@ -1,4 +1,5 @@
 <?php include('header.php'); ?>
+
 <!-- Hero Video Banner -->
 <section class="hero-vedoi" id="bannervedio">
   <div class="slide-container">
@@ -18,8 +19,7 @@
 </section>
 
 
-<!--  -->
-
+<!-- services  -->
 <section class="vertical-swiper-section">
 
   <!-- Swiper Container -->
@@ -89,7 +89,7 @@
     <div class="row">
       <div class="col-lg-12 hero-slide">
         <div class="slide-container">
-         
+
           <img src="assets/images/yellow.png" class="slides_img" alt="Slide 3">
           <img src="assets/images/blue.png" class="slides_img" alt="Slide 2">
           <div class="counter_section">
@@ -132,7 +132,7 @@
                               </div>
                               <div class="col-lg-6">
                                 <div class="counter-box-text">
-                                <h2 data-aos="fade-in" data-aos-duration="1500" data-aos-easing="ease-in-out" id="professionalsCounter">3000+</h2>
+                                  <h2 data-aos="fade-in" data-aos-duration="1500" data-aos-easing="ease-in-out" id="professionalsCounter">3000+</h2>
 
                                 </div>
 
@@ -153,12 +153,13 @@
                                 </div>
                               </div>
                               <div class="col-lg-6">
-                                <div class="counter-box-text">   <h2 data-aos="fade-in" data-aos-duration="1500" data-aos-easing="ease-in-out" id="servicesCounter">5000+</h2>
+                                <div class="counter-box-text">
+                                  <h2 data-aos="fade-in" data-aos-duration="1500" data-aos-easing="ease-in-out" id="servicesCounter">5000+</h2>
                                 </div>
                               </div>
                               <div class="col-lg-12">
                                 <div class="content">
-                                <p data-aos="fade-in" data-aos-duration="1500" data-aos-easing="ease-in-out" class="aos-init aos-animate" style="margin-right: 40px;">Car and Bike Services</p>
+                                  <p data-aos="fade-in" data-aos-duration="1500" data-aos-easing="ease-in-out" class="aos-init aos-animate" style="margin-right: 40px;">Car and Bike Services</p>
                                 </div>
                               </div>
                             </div>
@@ -261,7 +262,6 @@
 
 
 <!-- testimonial -->
-
 <section id="testi_monials">
 
   <div class="container">
@@ -284,7 +284,7 @@
                   <img src="assets/images/testimonial/1.jpg" alt="John Doe" />
                   <div>
                     <strong>Kumar</strong><br />
-                     Customer
+                    Customer
                   </div>
                 </div>
                 <div class="stars">★★★★★</div>
@@ -389,7 +389,7 @@
 </section>
 
 
-
+<!-- faq -->
 <section class="faq" id="faq_sec">
   <div class="container" data-aos="fade-up" data-aos-duration="500">
     <div class="row">
@@ -469,7 +469,6 @@
 
 
 <!-- App Store -->
-
 <section id="app_store">
   <div class="container">
     <div class="row">

@@ -16,10 +16,10 @@
 
             <h2>Quick Link</h2>
             <ul class="footer-links">
-              <li><a href="#" class="text-dark">Home</a></li>
-              <li><a href="#" class="text-dark">About Us</a></li>
-              <li><a href="#" class="text-dark">Services</a></li>
-              <li><a href="#" class="text-dark">Contact Us</a></li>
+              <li><a href="index.php" class="text-dark">Home</a></li>
+              <li><a href="about-us.php" class="text-dark">About Us</a></li>
+              <li><a href="services.php" class="text-dark">Services</a></li>
+              <li><a href="contactus.php" class="text-dark">Contact Us</a></li>
             </ul>
           </div>
 

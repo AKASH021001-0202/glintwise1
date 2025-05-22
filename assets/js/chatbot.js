@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function clearChat() {
-      chatBox.innerHTML = ""; // Clear all messages
+      chatBox.innerHTML = "";
     }
 
     function resetToMainMenu() {
@@ -135,8 +135,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <p class="robot_intro">Hey, <span class="color-primary">Buddy</span> 👋<br>
             How can I help you today?</p>
             <p class="robot_content">
-              I'm here to assist you with all your vehicle cleaning needs. 
-              Whether it's a car or a bike, just let me know what you'd like to book.
+              I'm here to assist you with our premium car wash services and combo packages.
             </p>
           </div>
         `;
@@ -148,19 +147,19 @@ document.addEventListener("DOMContentLoaded", function () {
                 <div class="col-lg-6">
                   <div class="iconcontent hover-effect" id="car-wash-option">
                     <div class="icon_bot">
-                      <h4>Car Wash</h4>
+                      <h4>Car Wash Plans</h4>
                       <img src="assets/images/carwash_icon.png" alt="Car Wash Icon">
                     </div>
-                    <p>Premium exterior and interior cleaning for your car. Shine like new!</p>
+                    <p>our Basic and Premium car wash packages</p>
                   </div>
                 </div>
                 <div class="col-lg-6">
-                  <div class="iconcontent hover-effect" id="bike-wash-option">
+                  <div class="iconcontent hover-effect" id="both-option">
                     <div class="icon_bot">
-                      <h4>Bike Wash</h4>
-                      <img src="assets/images/bikewash_icon.png" alt="Bike Wash Icon">
+                      <h4>Car & Bike Combo</h4>
+                      <img src="assets/images/bikewash_icon.png" alt="Combo Icon">
                     </div>
-                    <p>Quick and thorough cleaning for your two-wheeler. Ride fresh!</p>
+                    <p>Special package for both car and bike owners</p>
                   </div>
                 </div>
               </div>
@@ -180,8 +179,8 @@ document.addEventListener("DOMContentLoaded", function () {
           .getElementById("car-wash-option")
           ?.addEventListener("click", carWashOptions);
         document
-          .getElementById("bike-wash-option")
-          ?.addEventListener("click", bikeWashOptions);
+          .getElementById("both-option")
+          ?.addEventListener("click", bothOptions);
       }, 100);
     }
 
@@ -190,15 +189,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const messageHTML = `
           <div class="bot-message">
-          <br>
-          <strong>Car Wash Plan – <span class="rupee">₹</span>699/month</strong><br>
-          <u>Includes:</u>
-          <ul class="checklist">
-            <li>30 Exterior Washes (Wet/Dry)</li>
-            <li>4 Premium Interior Foam Wash & Vacuum Cleaning</li>
-            <li>Bi-weekly Air Pressure Check</li>
-            <li>Monthly Once Under-Chassis Wash</li>
-          </ul>
+            <p style="margin-bottom:0; "><B>Choose a Car Wash Plan:</B></p>        
+            
           </div>
         `;
 
@@ -206,79 +198,125 @@ document.addEventListener("DOMContentLoaded", function () {
 
       showOptions([
         {
-          text: "🚗 Book Car Wash Plan",
-          action: () => confirmBooking("Monthly Car Wash Plan", 699),
+          text: "Basic Car Wash (SMALL CARS) (₹699)",
+          action: () =>
+            confirmBooking("Basic Car Wash Plan (SMALL CARS) ", 699),
+        },
+        {
+          text: "Premium Car Wash (SUV+ BIG CARS) (₹899)",
+          action: () =>
+            confirmBooking("Premium Car Wash Plan (SUV+ BIG CARS)", 899),
         },
         { text: "🔙 Back to main menu", action: resetToMainMenu },
       ]);
     }
 
-    function bikeWashOptions() {
-      conversationState = "bike_wash";
+    function bothOptions() {
+      conversationState = "both";
 
       const messageHTML = `
-          <div class="bot-message">
-          <br>
-          <strong>🏍️ Bike Wash Plan – <span class="rupee">₹ </span>199/month</strong><br>
-          <u>Includes:</u>
-          <ul class="checklist">
-            <li>3 Washes Per Week</li>
-            <li>Yearly Once Oil Change</li>
-          </ul>
-          </div>
+                <div class="bot-message">
+                  <strong>Car & Bike Combo Plan – <span class="rupee">₹</span>999/month</strong><br>
+                  <u>Includes:</u>
+                  <ul class="checklist">
+                    <li><strong>Car Services:</strong></li>
+                    <li>15 Exterior Washes (Wet/Dry)</li>
+                    <li>2 Interior Foam Wash & Vacuum Cleaning</li>
+                    <li><strong>Bike Services:</strong></li>
+                    <li>12 Washes (3 per week)</li>
+                    <li>Yearly Once Oil Change</li>
+                    <li>Chain Lubrication Every 2 Months</li>
+                  </ul>
+                  <p class="text-success">Save ₹399 compared to booking separately!</p>
+                </div>
         `;
 
       addCustomHTMLMessage(messageHTML, "bot");
 
       showOptions([
         {
-          text: "🏍️ Book Bike Wash Plan",
-          action: () => confirmBooking("Monthly Bike Wash Plan", 199),
+          text: "Book Combo Plan (₹999)",
+          action: () => confirmBooking("Car & Bike Combo Plan", 999),
         },
         { text: "🔙 Back to main menu", action: resetToMainMenu },
       ]);
     }
 
     function confirmBooking(service, price) {
+      let detailsHTML = "";
+      console.log("Service received:", service); // Debug log
+
+      // Normalize the service name for comparison
+      const normalizedService = service
+        .toLowerCase()
+        .replace(/\s+/g, " ")
+        .trim();
+
+      if (normalizedService.includes("basic car wash")) {
+        detailsHTML = `
+          <div class="plan-option">
+            <u>Includes:</u>
+            <ul class="checklist">
+              <li>30 Exterior Wash.</li>
+              <li>Monthly 4 Interior Wash & Vaccum.</li>
+              <li>Weekly 2 Air Checkup.</li>
+              <li>Puncher Free (2-Times).</li>
+            </ul>
+          </div>
+        `;
+      } else if (normalizedService.includes("premium car wash")) {
+        detailsHTML = `
+          <div class="plan-option">
+            <u>Includes:</u>
+            <ul class="checklist">
+              <li>30 Exterior Wash.</li>
+              <li>Monthly 4 Interior Wash & Vaccum.</li>
+              <li>Weekly 2 Air Checkup.</li>
+              <li>Puncher Free (2-Times).</li>
+            </ul>
+          </div>
+        `;
+      } else if (normalizedService.includes("combo")) {
+        detailsHTML = `
+          <div class="plan-option">
+            <u>Includes:</u>
+            <ul class="checklist">
+              <li><strong>Car & Bike Services:</strong></li>
+              <li>Weekly Three(3) Bike Wash.</li>
+              <li>30 Exterior Wash.</li>           
+              <li>Weekly 2 Air Checkup.</li>
+              <li>Puncher Free (2-Times).</li>
+         
+            </ul>
+          </div>
+        `;
+      }
+
       addCustomHTMLMessage(
         `
-          <div class="message-bubble">
-            You've selected: <strong>${service}</strong> for <span class="rupee">₹</span>${price}.<br>Should I book this for you?
+        <div class="message-bubble">
+          <strong>Please confirm your ${service} selection:</strong><br>
+          ${detailsHTML}
+          <div class="price-confirmation">
+            Total Amount: <span class="rupee">₹</span>${price}
           </div>
+          Is this correct?
+        </div>
         `,
         "bot"
       );
 
       showOptions([
         {
-          text: "Yes, please book it",
+          text: "Yes, book now",
           action: () => completeBooking(service, price),
         },
         {
-          text: "No, show other options",
+          text: "No, choose again",
           action: () => {
             if (conversationState === "car_wash") carWashOptions();
-            else if (conversationState === "bike_wash") bikeWashOptions();
+            else if (conversationState === "both") bothOptions();
             else resetToMainMenu();
-          },
-        },
-        {
-          text: "Booking Both Two Services",
-          action: () => {
-            addCustomHTMLMessage(
-              `
-                  <div class="message-bubble">
-                    Thank you for using our service! Have a great day! 🚗💨
-                  </div>
-                `,
-              "bot"
-            );
-            setTimeout(() => {
-              const bothModalForm = new bootstrap.Modal(document.getElementById("bothModal"));
-              bothModalForm.show();
-              resetToMainMenu();
-            }, 1000);
-           
           },
         },
       ]);
@@ -303,7 +341,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
       showOptions([
         { text: "Yes, book another", action: resetToMainMenu },
-
         {
           text: "No, I'm done",
           action: () => {
@@ -314,24 +351,22 @@ document.addEventListener("DOMContentLoaded", function () {
             setTimeout(() => {
               toggleChat();
 
-              // Open the appropriate modal based on the service booked
-              if (service.includes("Car")) {
+              if (service.includes("Car") && !service.includes("Bike")) {
                 const carModal = new bootstrap.Modal(
                   document.getElementById("carModal")
                 );
                 carModal.show();
-              } else if (service.includes("Bike")) {
-                const bikeModal = new bootstrap.Modal(
-                  document.getElementById("bikeModal")
+              } else if (service.includes("Combo")) {
+                const bothModal = new bootstrap.Modal(
+                  document.getElementById("bothModal")
                 );
-                bikeModal.show();
+                bothModal.show();
               }
               resetToMainMenu();
             }, 1500);
           },
         },
       ]);
-      // Close the chat after a short delay
     }
   } else {
     console.error("One or more required elements are missing from the DOM");

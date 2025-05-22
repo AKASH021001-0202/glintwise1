@@ -27,7 +27,7 @@
                     <div class="item" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
                         <h3 data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500" data-aos-delay="150">Glintwise India – Clean Rides, Zero Hassle</h3>
                         <p data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500" data-aos-delay="200">We make it easy, affordable, and hassle-free—so you can focus on what matters. Keeping your car clean shouldn't be a hassle. Glintwise India makes it easy with professional, reliable, and affordable cleaning.</p>
-                        <p data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500" data-aos-delay="250">Get a <span class="hover-blue">Car Wash at ₹699/month </span>or a <span class="hover-blue">Bike Wash at ₹199/month</span> no waiting, no stress, just a spotless ride always.</p>
+                        <p data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500" data-aos-delay="250">Get a <span class="hover-blue">Car Wash (SUV+ BIG CARS) at ₹899/month </span>or a <span class="hover-blue">Car Wash (SMALL CARS) at ₹699/month</span> no waiting, no stress, just a spotless ride always.</p>
                         <p data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500" data-aos-delay="300">Join <span class="hover-blue">1 lakh+ happy customers </span> and book your wash today!</p>
                     </div>
                 </div>
@@ -49,10 +49,58 @@
             <!-- Left Info Card -->
             <div class="col-lg-4 col-md-6 col-sm-12" data-aos="fade-right" data-aos-duration="600" data-aos-delay="100">
                 <div class="pricing_item1">
-                    <h3>Save More</h3>
+                    <!-- <h3>Save More</h3>
                     <h2>With Goodplans</h2>
                     <p>Get the best value with our budget-friendly plans. Enjoy hassle-free car and bike washes that keep your ride spotless. Glintwise ensures lasting shine at an affordable price!</p>
-                    <img src="assets/images/man.png" alt="">
+                    <img src="assets/images/man.png" alt=""> -->
+                    <div class="price_con">
+                        <div class="pricing_head">
+                            <h3>CAR & BIKE</h3>
+                            <p>Keep your car spotless with our hassle-free service for a gleaming ride every day.</p>
+                        </div>
+                        <div class="price">
+                            <h1>₹11111/Yearly</h1>
+                        </div>
+                        <ul class="price_list_icon" style="list-style-type: none;">
+                            <li>
+                                <h5>Include This Package :</h5>
+                            </li>
+                            <li>
+                                <div class="icon_con">
+                                    <i class="fa fa-check"></i>
+                                    <h5>Weekly Three(3) Bike Wash.</h5>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon_con">
+                                    <i class="fa fa-check"></i>
+                                    <h5>30 Exterior Wash.</h5>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon_con">
+                                    <i class="fa fa-check"></i>
+                                    <h5>Monthly 4 Interior Wash & Vaccum.</h5>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon_con">
+                                    <i class="fa fa-check"></i>
+                                    <h5>Weekly 2 Air Checkup.</h5>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon_con">
+                                    <i class="fa fa-check"></i>
+                                    <h5>Puncher Free (2-Times).</h5>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="price-btn">
+                        <a href="#" type="button" class="btn  btn-book" data-bs-toggle="modal" data-bs-target="#carModal" class="btn btn-book">Book Now</a>
+                    </div>
                 </div>
             </div>
 
@@ -61,11 +109,12 @@
                 <div class="pricing_item">
                     <div class="price_con">
                         <div class="pricing_head">
-                            <h3>CAR WASH</h3>
+                            <h3>CAR WASH </h3>
+                            <h5>(SUV+ BIG CARS)</h5>
                             <p>Keep your car spotless with our hassle-free service for a gleaming ride every day.</p>
                         </div>
                         <div class="price">
-                            <h1>₹699/month</h1>
+                            <h1>₹899/month</h1>
                         </div>
                         <ul class="price_list_icon">
                             <li>
@@ -74,19 +123,25 @@
                             <li>
                                 <div class="icon_con">
                                     <i class="fa fa-check"></i>
-                                    <h5>30 Exterior Washes (Wet/Dry)</h5>
+                                    <h5>30 Exterior Wash.</h5>
                                 </div>
                             </li>
                             <li>
                                 <div class="icon_con">
                                     <i class="fa fa-check"></i>
-                                    <h5>Vacuum Cleaning</h5>
+                                    <h5>Monthly 4 Interior Wash & Vaccum.</h5>
                                 </div>
                             </li>
                             <li>
                                 <div class="icon_con">
                                     <i class="fa fa-check"></i>
-                                    <h5>Bi-weekly Air Pressure Check</h5>
+                                    <h5>Weekly 2 Air Checkup.</h5>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon_con">
+                                    <i class="fa fa-check"></i>
+                                    <h5>Puncher Free (2-Times).</h5>
                                 </div>
                             </li>
 
@@ -103,30 +158,43 @@
                 <div class="pricing_item">
                     <div class="price_con">
                         <div class="pricing_head">
-                            <h3>BIKE WASH</h3>
+                            <h3>CAR WASH </h3>
+                            
+                            <h5>(SMALL CARS)</h5>
                             <p>Keep your bike shining with our quick, reliable wash. Ride clean, effortlessly.</p>
                         </div>
                         <div class="price">
-                            <h1>₹199/month</h1>
+                            <h1>₹699/month</h1>
                         </div>
                         <ul class="price_list_icon">
                             <li>
                                 <h5>Include This Package :</h5>
                             </li>
+                            <li>
+                                <div class="icon_con">
+                                    <i class="fa fa-check"></i>
+                                    <h5>30 Exterior Wash.</h5>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon_con">
+                                    <i class="fa fa-check"></i>
+                                    <h5>Monthly 4 Interior Wash & Vaccum.</h5>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon_con">
+                                    <i class="fa fa-check"></i>
+                                    <h5>Weekly 2 Air Checkup.</h5>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon_con">
+                                    <i class="fa fa-check"></i>
+                                    <h5>Puncher Free (2-Times).</h5>
+                                </div>
+                            </li>
 
-                            <li>
-                                <div class="icon_con">
-                                    <i class="fa fa-check"></i>
-                                    <h5>3 Washes Per Week</h5>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="icon_con">
-                                    <i class="fa fa-check"></i>
-                                    <h5>
-                                        Bi-weekly Air Pressure Check</h5>
-                                </div>
-                            </li>
                         </ul>
                     </div>
                     <div class="price-btn">
